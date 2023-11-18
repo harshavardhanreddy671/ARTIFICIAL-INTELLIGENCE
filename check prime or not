@@ -1,0 +1,25 @@
+def check_prime(num):
+    if num <= 1:
+        return False
+    elif num <= 3:
+        return True
+    elif num % 2 == 0 or num % 3 == 0:
+        return False
+    i = 5
+    while i * i <= num:
+        if num % i == 0 or num % (i + 2) == 0:
+            return False
+        i += 6
+    return True
+
+# Input a number
+number = int(input("Enter a number: "))
+
+# Check if the number is prime
+result = check_prime(number)
+
+# Display the result
+if result:
+    print(f"{number} is a prime number")
+else:
+    print(f"{number} is not a prime number")
