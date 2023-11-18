@@ -1,0 +1,16 @@
+def swap_variables(a, b):
+    # Swapping using a temporary variable
+    temp = a
+    a = b
+    b = temp
+    return a, b
+
+# Input two variables
+x = float(input("Enter the value of x: "))
+y = float(input("Enter the value of y: "))
+
+# Call the function to swap the variables
+x, y = swap_variables(x, y)
+
+# Display the swapped values
+print(f"After swapping, x = {x} and y = {y}")
