@@ -1,0 +1,8 @@
+def multiplication_table(number, times=10):
+    print(f"Multiplication Table for {number}:")
+    for i in range(1, times + 1):
+        result = number * i
+        print(f"{number} x {i} = {result}")
+user_input = int(input("Enter a number to generate its multiplication table: "))
+table_length = int(input("Enter the length of the multiplication table (default is 10): ") or 10)
+multiplication_table(user_input, table_length) 
