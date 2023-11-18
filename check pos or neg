@@ -1,0 +1,16 @@
+def check_positive_negative(num):
+    if num > 0:
+        return "Positive"
+    elif num < 0:
+        return "Negative"
+    else:
+        return "Zero"
+
+# Input a number
+number = float(input("Enter a number: "))
+
+# Check if the number is positive, negative, or zero
+result = check_positive_negative(number)
+
+# Display the result
+print(f"The number {number} is {result}")
