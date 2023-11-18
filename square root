@@ -1,0 +1,13 @@
+import math
+
+def calculate_square_root(number):
+    return math.sqrt(number)
+
+# Input a number
+num = float(input("Enter a number: "))
+
+# Call the function to calculate square root
+result = calculate_square_root(num)
+
+# Display the result
+print(f"The square root of {num} is: {result}")
