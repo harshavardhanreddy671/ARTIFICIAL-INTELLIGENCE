@@ -1,0 +1,10 @@
+def sum_of_natural_numbers(n):
+    if n < 0:
+        return "Please enter a positive integer."
+    else:
+        (n + 1) / 2
+        sum_value = n * (n + 1) // 2
+        return sum_value
+user_input = int(input("Enter a positive integer: "))
+result = sum_of_natural_numbers(user_input)
+print(f"The sum of natural numbers up to {user_input} is: {result}") 
