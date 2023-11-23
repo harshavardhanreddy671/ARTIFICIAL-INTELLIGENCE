@@ -1,0 +1,17 @@
+planet(mercury, long, 57.9, 4879).
+planet(venus, long, 108.2, 12104).
+planet(earth, long, 149.6, 12742).
+planet(mars, long, 227.9, 6779).
+planet(jupiter, beauty, 778.6, 139820).
+planet(saturn, beauty, 1433.5, 116460).
+planet(uranus, rough, 2872.5, 50724).
+planet(neptune, rough, 4495.1, 49244).
+long_planet(Name, Distance, Diameter) :-
+planet(Name, long, Distance, Diameter).
+beauty_planet(Name, Distance, Diameter) :-
+planet(Name, beauty, Distance, Diameter).
+rough_planet(Name, Distance, Diameter) :-
+planet(Name, rough, Distance, Diameter).
+planet_closer_than(DistanceLimit, Name, Type, Distance, Diameter) :-
+planet(Name, Type, Distance, Diameter),
+Distance < DistanceLimit.
