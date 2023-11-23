@@ -1,0 +1,7 @@
+
+dob(john, '1990-05-15').
+dob(sara, '1985-10-20').
+dob(mike, '1998-03-08').
+dob(lisa, '1976-12-30').
+get_dob(Name, DateOfBirth) :-
+dob(Name, DateOfBirth).
