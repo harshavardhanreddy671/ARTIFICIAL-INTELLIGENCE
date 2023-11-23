@@ -1,0 +1,10 @@
+parent(john, peter).
+parent(john, mary).
+parent(peter, anne).
+parent(peter, lisa).
+parent(mary, bob).
+ancestor(X, Y) :- parent(X, Y).
+ancestor(X, Y) :- parent(X, Z), ancestor(Z, Y).
+find_ancestor(X, Y) :-
+ancestor(X, Y),
+format('~w is an ancestor of ~w.~n', [X, Y]).
