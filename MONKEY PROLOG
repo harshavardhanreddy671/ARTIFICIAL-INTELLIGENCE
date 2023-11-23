@@ -1,0 +1,16 @@
+fruit_color(apple, red).
+fruit_color(banana, yellow).
+fruit_color(grape, purple).
+fruit_color(orange, orange).
+fruit_color(watermelon, green).
+find_fruit_color(Fruit, Color) :-
+fruit_color(Fruit, Color).
+find_fruits_of_color(Color, Fruits) :-
+fruit_color(Fruit, Color),
+findall(Fruit, fruit_color(Fruit, Color), Fruits).
+list_all_fruits_and_colors :-
+fruit_color(Fruit, Color),
+format('~w is ~w~n', [Fruit, Color]),
+fail. % To trigger backtracking
+find_fruit_of_color(Color, Fruit) :-
+fruit_color(Fruit, Color).
