@@ -1,0 +1,16 @@
+% Define symptoms for different diseases
+symptom(fever, flu).
+symptom(cough, flu).
+symptom(rash, measles).
+symptom(fever, measles).
+symptom(headache, meningitis).
+symptom(stiff_neck, meningitis).
+has_disease(Patient, Disease) :-
+symptom(fever, Disease),
+symptom(cough, Disease),
+has_disease(Patient, Disease) :-
+symptom(headache, Disease),
+symptom(stiff_neck, Disease),
+diagnose_patient(Patient, Disease) :-
+has_disease(Patient, Disease),
+format('Patient ~w has ~w.~n', [Patient, Disease]).
