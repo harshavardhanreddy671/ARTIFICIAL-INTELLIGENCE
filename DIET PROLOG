@@ -1,0 +1,9 @@
+diet_for(hypertension, 'Low-sodium diet with fruits, vegetables, and whole grains.').
+diet_for(diabetes, 'Balanced diet with controlled carbohydrates and sugars.').
+diet_for(high_cholesterol, 'Low-cholesterol diet with lean proteins and healthy fats.').
+diet_for(ibs, 'FODMAP diet with restricted fermentable carbohydrates.').
+diet_for(heart_disease, 'Heart-healthy diet with limited saturated fats and sodium.').
+diet_for(osteoporosis, 'Calcium-rich diet with vitamin D for bone health.').
+suggest_diet(Disease, DietPlan) :-
+diet_for(Disease, DietPlan),
+write('For '), write(Disease), write(', '), write(DietPlan), nl.
