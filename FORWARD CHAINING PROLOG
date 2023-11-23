@@ -1,0 +1,12 @@
+likes(mary, chocolate).
+likes(mary, ice_cream).
+likes(john, ice_cream).
+likes(susan, chocolate).
+likes(susan, apples).
+likes(peter, chocolate).
+friend(X, Y) :- likes(X, Z), likes(Y, Z), X \= Y.
+forward_chaining :-
+    friend(X, Y),
+    format('~w and ~w are friends because they both like something in common.~n', [X, Y]),
+    fail.
+forward_chaining.
